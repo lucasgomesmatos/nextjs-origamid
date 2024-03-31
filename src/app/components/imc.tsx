@@ -7,7 +7,7 @@ export const Imc = () => {
 
   const handleCalculate = async (formData: FormData) => {
     const weight = formData.get('weight');
-    const height = formData.get('height');
+    const height = Number(formData.get('height')) / 100;
 
     const imc = Number(weight) / (Number(height) * Number(height));
 
@@ -16,8 +16,14 @@ export const Imc = () => {
 
   return (
     <form action={handleCalculate} method="GET">
-      <input type="text" placeholder="Altura" name="height" />
-      <input type="text" placeholder="peso" name="weight" />
+      <div>
+        <label htmlFor="height">Altura (em cm)</label>
+        <input type="text" id="height" name="height" />
+      </div>
+      <div>
+        <label htmlFor="weight">Peso (em kg)</label>
+        <input type="text" name="weight" id="weight" />
+      </div>
       <button type="submit">Calcular</button>
     </form>
   );
