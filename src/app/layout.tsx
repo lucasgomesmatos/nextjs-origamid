@@ -4,7 +4,7 @@ import { Header } from '@/components/header';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Origamid Next',
+  title: 'Origamid Next JS',
   description: 'Criado por Origamid',
 };
 
