@@ -7,7 +7,7 @@ export const Header = () => {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/imc">Imc</Link>
+        <Link href="/produtos">Produtos</Link>
       </li>
     </ul>
   );
